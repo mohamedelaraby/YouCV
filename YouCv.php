@@ -2,11 +2,25 @@
 <?php
 //variables.
 $pageTitle = "YouCV ";
-$heading = "Welcome to YouCv website.";
+$heading = "Welcome to "."$pageTitle"."website.";
 $brief = "A personal website which 
 you can create your own cv";
 
+//Langauage that i love.
+$language = "<h1>The language i love</h1>";
+$language .= "<ul>";
+$language .= "<li>PHP</li>";
+$language .= "<li>HTMl</li>";
+$language .= "<li>Javascript</li>";
+$language .= "</ul>"
+
 ?>
+
+
+
+
+
+ 
 
 
 
@@ -19,9 +33,15 @@ you can create your own cv";
     <?php  echo "
    <h1>$heading</h1>
     <p> $brief</p>";
-
     ?>
-   
+    <p><?php  echo  $pageTitle.  " is for apply to a job easily "." so welcome again" ;?></p>
+
+
+    <!--print ul-->
+       <?php echo $language; ?>
+     
+
+
    
     
     </body>
