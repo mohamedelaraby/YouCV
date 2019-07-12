@@ -1,5 +1,16 @@
-
+<!--
+==========================
+==author: Muhammad Alaraby
+==========================
+==Date: 12/7/2019
+==========================
+==Info: Learn PHP Basic
+=========================
+-->
 <?php
+
+#Shell unix comment
+# hello from unix comment
 //variables.
 $pageTitle = "YouCV ";
 $heading = "Welcome to "."$pageTitle"."website.";
@@ -16,11 +27,6 @@ $language .= "</ul>"
 
 ?>
 
-
-
-
-
- 
 
 
 
