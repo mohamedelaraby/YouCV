@@ -1,12 +1,3 @@
-<?php
-
-echo "hello";
-echo "dhgdfgdf";
-?>
-
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -14,6 +5,10 @@ echo "dhgdfgdf";
         <title>YouCv - A personal website which you can create your own cv.</title>
     </head>
     <body>
+    <?php  echo "
+    <h1>Heading</h1>
+    <p class=\"hello\">this is a paragaraph from php</p>
+    ";?>
     
     </body>
 </html>
