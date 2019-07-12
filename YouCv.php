@@ -25,6 +25,7 @@ $language .= "<li>HTMl</li>";
 $language .= "<li>Javascript</li>";
 $language .= "</ul>"
 
+
 ?>
 
 
@@ -45,10 +46,39 @@ $language .= "</ul>"
 
     <!--print ul-->
        <?php echo $language; ?>
+
+<?php 
+
+
+
+#Data type
+//String.
+$var1 = "Welcome to php";
+$var2 = 100;
+$var3 = true;
+$var4 = 100.0;
+ 
+//String array.
+$stringArray = array(
+    "a" => "A"."</br>",
+    "b"  => "B"."</br>",
+    "c" => "C",
+);
+
+
+
+ 
+
+echo "<h1>Get Type</h1>";
+ echo gettype($var1)."</br>";
+echo "<h2>Variable dump</h2>"."</br>";
+echo var_dump($var1)."</br>";
+echo var_dump($var2)."</br>";
+echo var_dump($var3)."</br>";
+echo var_dump($var4)."</br>";
+echo var_dump($stringArray)."</br>";
+?>
      
-
-
-   
     
     </body>
 </html>
