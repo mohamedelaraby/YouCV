@@ -1,14 +1,28 @@
 
+<?php
+//variables.
+$pageTitle = "YouCV ";
+$heading = "Welcome to YouCv website.";
+$brief = "A personal website which 
+you can create your own cv";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>YouCv - A personal website which you can create your own cv.</title>
+        <title><?php echo $pageTitle ?></title>
     </head>
     <body>
     <?php  echo "
-    <h1>Heading</h1>
-    <p class=\"hello\">this is a paragaraph from php</p>
-    ";?>
+   <h1>$heading</h1>
+    <p> $brief</p>";
+
+    ?>
+   
+   
     
     </body>
 </html>
