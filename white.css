@@ -1,0 +1,15 @@
+body{
+background-color: #FFF;
+
+}
+
+.centerPage{
+   
+    text-align: center;
+    font-size: 3rem;
+    width:  50rem;
+    height: 50rem;
+    margin: 0 auto;
+    color: #854836;
+   
+}
