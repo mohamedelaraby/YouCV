@@ -66,9 +66,9 @@ function makeFrame ($element) {
            echo "i`ve found it sir" . "<br>";
             //copy this file every time i work in it
             if(!copy(__FILE__, __DIR__ .'/Backup/Resume2019.php')){
-                echo "Your file is copied again sir". "<br>";
+                echo "Your file is  [ copied ] again sir". "<br>";
             } else {
-                echo "Your file os not copied". "<br>";
+                echo "Your file is [ not ] copied". "<br>";
             }
        } else {
         mkdir('Backup');
@@ -77,6 +77,7 @@ function makeFrame ($element) {
             echo "Your file is copied again sir". "<br>";
         } else {
             echo "Your file os not copied". "<br>";
+            
         }
        }
  }
@@ -149,7 +150,7 @@ echo "</pre>";
 /*---------------------------------------------------------------*/
 
 /* fopen modes;
-r : Read only starting from th beginning of the file [File must be exist]
+[ r ]: Read only starting from th beginning of the file [File must be exist]
 [ r+ ] :- Read & write starting from beginning 
 of the file [File must be exist]
 [ w ] : Write only and  open and clear the content + if the file is not exists creates it. 
@@ -171,21 +172,66 @@ echo $filecontent;
 } 
 
 /*----------------------------------------------------- */
-//fseek.
+//fseek. SEEK_SET, SEEK_CUR, SEEK_END
 function fileSeek(){
 $fileHandle = fopen('fileopen.txt','r+');
 fseek($fileHandle, -11, SEEK_END);
-
 $write = fwrite($fileHandle, "[h]"); 
-
-
+}
+/*----------------------------------------------------- */
+// [ fclose ] close the operation on the file.
+ function training(){
+    //Open the file with write and read.
+    $fileHandle = fopen('fileopen.txt', 'r+');
+    
+    //put the cursor in particular offset using fseek
+    fseek($fileHandle, 9, SEEK_CUR );
+    fwrite($fileHandle, 'nickname ');
+    fclose($fileHandle);
 
 }
-fileSeek();
+/*----------------------------------------------------- */
+//Super Scope [Global scope].
+function testGlobalScope() {
+    $name = "Muhammad";
+    $GLOBALS['name'];
+}
+/*----------------------------------------------------- */
+//SERVER
+function ServerTest(){
+   
+    //Print the server address.
+    echo $_SERVER['SERVER_ADDR'] . "<br>";
+
+    //Get the server name.
+    echo $_SERVER['SERVER_NAME']. "<br>";
+
+    //Print the query string d aafter the question mark in the domain address.
+    echo $_SERVER['QUERY_STRING']. "<br>";
+
+    //Know where are you come on the web
+    echo $_SERVER['HTTP_REFERER']. "<br>";
+
+    //Get the server port.
+    echo "You are using port[". $_SERVER['SERVER_PORT'] ."]";
+}
+
+
+/*----------------------------------------------------- */
+
+function getAndPost(){
+
+}
+getAndPost();
 ?>
 
-
 </div>
+
+ <form action="login.php" method="post">
+ <input type="text" name="username">
+ <input type="password" name="password">
+ <input type="submit" value="login">
+ </form>
 
      
     </body>
